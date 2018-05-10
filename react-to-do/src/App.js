@@ -45,9 +45,9 @@ class App extends Component {
     return (
       <div className="App">
       <ul>
-      { this.state.todos.map( (todo, index) =>
+      { this.state.todos.map( (todo, index) => //this method should call this.setState() and pass it a new array 
         <ToDo key={ index } description={ todo.description } isCompleted={ todo.isCompleted } toggleComplete={ () => this.toggleComplete(index)}
-        deleteTodo={() => this.handleDelete(index)} />
+        deleteTodo={() => this.handleDelete(index)} /> //define a delete toDo on the App component
       )}
         </ul>
         <form onSubmit={ (e) => this.handleSubmit(e) }>
